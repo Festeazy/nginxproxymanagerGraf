@@ -10,7 +10,7 @@ import socket
 
 print(socket.gethostname())
 
-npmhome = "/root/.config/NPMGRAF"
+
 
 reader = geoip2.database.Reader('/GeoLite2-City.mmdb')
 response = reader.city(str(sys.argv[1]))
@@ -43,6 +43,9 @@ from influxdb import InfluxDBClient
 
 import os
 # influx configuration - edit these
+
+npmhome = "/root/.config/NPMGRAF"
+npmhome = os.getenv('NPMGRAF_HOME')
 ifuser = os.getenv('INFLUX_USER')
 ifpass = os.getenv('INFLUX_PW')
 ifdb   = os.getenv('INFLUX_DB')
