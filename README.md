@@ -1,8 +1,13 @@
 # nginxproxymanagerGraf
 
-create influxdb nginxproxymangergraf
-
 some good readme is needed :)
+
+required things you do beforehand
+
+create influxdb nginxproxymangergraf
+get your GeoLite2-City.mmdb  google is your friend
+
+start docker on the same host wher npm runs
 
 ```
 docker run --name npmgraf -it --entrypoint "/bin/bash" \
