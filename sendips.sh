@@ -15,7 +15,7 @@ do
   if "$ipaddressnumber" == "$myhomeip";then
     echo "Home IP"
   else
-    python $NPMGRAF_HOME/Getipinfo.py "$ipaddressnumber" "$domain" "$length"
+    python /root/.config/NPMGRAF/Getipinfo.py "$ipaddressnumber" "$domain" "$length"
   fi
 done
 reboot
