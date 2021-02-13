@@ -37,12 +37,16 @@ reader.close()
 import datetime
 from influxdb import InfluxDBClient
 
+## get env vars and use
+
+import os
 # influx configuration - edit these
-ifuser = "USERNAME"
-ifpass = "PASSWORD"
-ifdb   = "Docker"
-ifhost = "192.168.0.1"
-ifport = "8081"
+ifuser = os.getenv('INFLUX_USER')
+ifpass = os.getenv('INFLUX_PW')
+ifdb   = os.getenv('INFLUX_DB')
+ifhost = os.getenv('INFLUX_HOST')
+ifport = os.getenv('INFLUX_PORT')
+
 hostname = socket.gethostname()
 measurement_name = ("ReverseProxyConnections")
 print (measurement_name)
