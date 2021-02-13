@@ -31,6 +31,7 @@ ENV PATH $PYENV_HOME/shims:$PYENV_HOME/bin:$PATH
 RUN pyenv install $PYTHON_VERSION
 RUN pyenv global $PYTHON_VERSION
 RUN pip install --upgrade pip && pyenv rehash
+RUN pip install geoip2
 
 # Clean
 RUN rm -rf ~/.cache/pip
