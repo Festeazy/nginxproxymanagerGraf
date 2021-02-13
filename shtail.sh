@@ -14,7 +14,7 @@ do
   if "$ipaddressnumber" == "$HomeIP";then
     echo "Home IP"
   else
-    /usr/bin/python3 $N-P-M-GRAF_HOME/Getipinfo.py "$ipaddressnumber" "$domain" "$length"
+    /usr/bin/python3 $NPMGRAF_HOME/Getipinfo.py "$ipaddressnumber" "$domain" "$length"
   fi
 done
 reboot
