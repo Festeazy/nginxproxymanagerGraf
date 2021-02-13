@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 import sys
+import os
+
 #import geoip2.webservice
 print (sys.argv[1])
 
@@ -41,7 +43,7 @@ from influxdb import InfluxDBClient
 
 ## get env vars and use
 
-import os
+
 # influx configuration - edit these
 ifuser = os.getenv('INFLUX_USER')
 ifpass = os.getenv('INFLUX_PW')
