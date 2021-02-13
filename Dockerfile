@@ -44,3 +44,32 @@ ENV N-P-M-GRAF_HOME=/root/.config/N-P-M-GRAF/
 ARG N-P-M-GRAF_HOME=/root/.config/N-P-M-GRAF/
 RUN export N-P-M-GRAF_HOME
 
+## seting up influx connection
+ENV INFLUX_USER=admin
+ARG INFLUX_USER=admin
+
+ENV INFLUX_PW=admin
+ARG INFLUX_PW=admin
+
+ENV INFLUX_DB=DB
+ARG INFLUX_DB=DB
+
+ENV INFLUX_HOST=192.168.0.11
+ARG INFLUX_HOST=192.168.0.11
+
+ENV INFLUX_PORT=192.168.0.11
+ARG INFLUX_PORT=192.168.0.11
+
+
+
+## Copy files
+COPY Getipinfo.py $N-P-M-GRAF_HOME/Getipinfo.py
+COPY shtail.sh $N-P-M-GRAF_HOME/shtail.sh
+
+COPY start.sh /root/start.sh
+RUN chmod +x  /root/start.sh
+
+ENTRYPOINT ["/root/start.sh"]
+
+
+
