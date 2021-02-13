@@ -10,7 +10,7 @@ do
   echo $ipaddressnumber 
   echo $domain
   #echo $dev
-  HomeIP='1.1.1.1' #HomeIP is used to not send your home public ip to keep the number of sends down
+  HomeIP='192.168.0.40' #HomeIP is used to not send your home public ip to keep the number of sends down
   if "$ipaddressnumber" == "$HomeIP";then
     echo "Home IP"
   else
