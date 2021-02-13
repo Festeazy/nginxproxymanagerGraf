@@ -1,5 +1,7 @@
 # nginxproxymanagerGraf
 
+create influxdb nginxproxymangergraf
+
 some good readme is needed :)
 
 ```
@@ -7,7 +9,7 @@ docker run --name npmgraf -it --entrypoint "/bin/bash" \
 -v /home/docker/nginx-proxy-manager/data/logs:/logs \
 -v /home/docker/nginx-proxy-manager/GeoLite2-City.mmdb:/GeoLite2-City.mmdb \
 -e INFLUX_USER=admin -e INFLUX_PW=password \
--e INFLUX_DB=nginxproxymanager \
+-e INFLUX_DB=nginxproxymanagergraf \
 -e INFLUX_HOST=192.168.0.189 \
 -e INFLUX_PORT=8086 \
 makarai/nginx-proxy-manager-graf
