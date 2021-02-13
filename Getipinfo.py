@@ -10,7 +10,9 @@ import socket
 
 print(socket.gethostname())
 
-reader = geoip2.database.Reader('/Shared/nginx/GeoLite2-City.mmdb')
+npmhome = os.getenv('$NPMGRAF_HOME')
+
+reader = geoip2.database.Reader('/root/.config/NPMGRAF/GeoLite2-City.mmdb')
 response = reader.city(str(sys.argv[1]))
 
 Lat = response.location.latitude
