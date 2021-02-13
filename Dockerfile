@@ -32,6 +32,7 @@ RUN pyenv install $PYTHON_VERSION
 RUN pyenv global $PYTHON_VERSION
 RUN pip install --upgrade pip && pyenv rehash
 RUN pip install geoip2
+RUN pip install influxdb
 
 # Clean
 RUN rm -rf ~/.cache/pip
