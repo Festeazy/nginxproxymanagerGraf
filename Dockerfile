@@ -38,11 +38,11 @@ RUN rm -rf ~/.cache/pip
 # Done python3.7 setup
 
 ## setup home folder
-RUN mkdir -p /root/.config/N-P-M-GRAF
+RUN mkdir -p /root/.config/NPMGRAF
 
-ENV N-P-M-GRAF_HOME=/root/.config/N-P-M-GRAF/
-ARG N-P-M-GRAF_HOME=/root/.config/N-P-M-GRAF/
-RUN export N-P-M-GRAF_HOME
+ENV NPMGRAF_HOME=/root/.config/NPMGRAF/
+ARG NPMGRAF_HOME=/root/.config/NPMGRAF/
+RUN export NPMGRAF_HOME
 
 ## seting up influx connection
 ENV INFLUX_USER=admin
@@ -63,8 +63,8 @@ ARG INFLUX_PORT=192.168.0.11
 
 
 ## Copy files
-COPY Getipinfo.py $N-P-M-GRAF_HOME/Getipinfo.py
-COPY shtail.sh $N-P-M-GRAF_HOME/shtail.sh
+COPY Getipinfo.py $NPMGRAF_HOME/Getipinfo.py
+COPY shtail.sh $NPMGRAF_HOME/shtail.sh
 
 COPY start.sh /root/start.sh
 RUN chmod +x  /root/start.sh
