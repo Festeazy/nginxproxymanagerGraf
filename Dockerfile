@@ -65,14 +65,11 @@ ARG INFLUX_PORT=192.168.0.11
 
 
 ## Copy files
-COPY Getipinfo.py $NPMGRAF_HOME/Getipinfo.py
-RUN chmod +x  $NPMGRAF_HOME/Getipinfo.py
+COPY Getipinfo.py /root/.config/NPMGRAF/Getipinfo.py
+RUN chmod +x  /root/.config/NPMGRAF/Getipinfo.py
 
-COPY shtail.sh $NPMGRAF_HOME/shtail.sh
-RUN chmod +x  $NPMGRAF_HOME/shtail.sh
-
-COPY shtail.sh $NPMGRAF_HOME/newshtail.sh
-RUN chmod +x  $NPMGRAF_HOME/newshtail.sh
+COPY sendips.sh /root/.config/NPMGRAF/sendips.sh
+RUN chmod +x  /root/.config/NPMGRAF/sendips.sh
 
 COPY start.sh /root/start.sh
 RUN chmod +x  /root/start.sh
