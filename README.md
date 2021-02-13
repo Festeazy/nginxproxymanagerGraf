@@ -10,7 +10,7 @@ get your GeoLite2-City.mmdb  google is your friend
 start docker on the same host where npm runs
 
 ```
-docker run --name npmgraf -it --entrypoint "/bin/bash" \
+docker run --name npmgraf -it
 -v /home/docker/nginx-proxy-manager/data/logs:/logs \
 -v /home/docker/nginx-proxy-manager/GeoLite2-City.mmdb:/GeoLite2-City.mmdb \
 -e INFLUX_USER=admin -e INFLUX_PW=password \
