@@ -42,8 +42,8 @@ RUN rm -rf ~/.cache/pip
 ## setup home folder
 RUN mkdir -p /root/.config/NPMGRAF
 
-ENV NPMGRAF_HOME=/root/.config/NPMGRAF/
-ARG NPMGRAF_HOME=/root/.config/NPMGRAF/
+ENV NPMGRAF_HOME=/root/.config/NPMGRAF
+ARG NPMGRAF_HOME=/root/.config/NPMGRAF
 RUN export NPMGRAF_HOME
 
 ## seting up influx connection
