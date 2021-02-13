@@ -37,4 +37,5 @@ RUN rm -rf ~/.cache/pip
 
 # Done python3.7 setup
 
-# Setup emby2jelly
+## setup home folder
+RUN mkdir -p /root/.config/N-P-M-GRAF
