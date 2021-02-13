@@ -2,7 +2,7 @@
 
 some good readme is needed :)
 
-'''
+```
 docker run --name npmgraf -it --entrypoint "/bin/bash" \
 -v /home/docker/nginx-proxy-manager/data/logs:/logs \
 -v /home/docker/nginx-proxy-manager/GeoLite2-City.mmdb:/GeoLite2-City.mmdb \
@@ -11,7 +11,7 @@ docker run --name npmgraf -it --entrypoint "/bin/bash" \
 -e INFLUX_HOST=192.168.0.189 \
 -e INFLUX_PORT=8086 \
 makarai/nginx-proxy-manager-graf
-'''
+```
 
 
 https://github.com/jc21/nginx-proxy-manager
