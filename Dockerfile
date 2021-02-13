@@ -39,3 +39,8 @@ RUN rm -rf ~/.cache/pip
 
 ## setup home folder
 RUN mkdir -p /root/.config/N-P-M-GRAF
+
+ENV N-P-M-GRAF_HOME=/root/.config/N-P-M-GRAF/
+ARG N-P-M-GRAF_HOME=/root/.config/N-P-M-GRAF/
+RUN export N-P-M-GRAF_HOME
+
