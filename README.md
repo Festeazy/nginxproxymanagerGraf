@@ -32,5 +32,6 @@ Obviously I'd appreciate a grafana Wiz to add some things here :) first time i w
 
 
 
-https://github.com/jc21/nginx-proxy-manager
-![nginx](https://github.com/ma-karai/nginxproxymanagerGraf/blob/master/Screenshot 2021-02-14%142221.png)
+https://github.com/jc21/nginx-proxy-manager  
+
+![nginx](https://github.com/ma-karai/nginxproxymanagerGraf/blob/master/Screenshot%202021-02-14%20142221.png?raw=true)
