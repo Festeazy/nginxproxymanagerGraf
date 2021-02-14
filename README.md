@@ -22,14 +22,10 @@ makarai/nginx-proxy-manager-graf
 
 world map
 ```
-SELECT count("IP") AS "metric" FROM "ReverseProxyConnections" WHERE $timeFilter GROUP BY "latitude", "longitude", "key", "IP"
+SELECT count("IP") AS "counts" FROM "ReverseProxyConnections" WHERE $timeFilter GROUP BY "latitude", "longitude", "IP"
 ```
 
 
-or as simple table
-```
-SELECT count("IP") AS "metric" FROM "ReverseProxyConnections" WHERE $timeFilter GROUP BY "latitude", "longitude", "key", "IP"
-```
 
 
 Obviously I'd appreciate a grafana Wiz to add some things here :) first time i worked with grafana.
