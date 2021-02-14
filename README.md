@@ -4,10 +4,10 @@ some good readme is needed :)
 
 required things you do beforehand
 
-create influxdb nginxproxymangergraf  
-get your GeoLite2-City.mmdb  google is your friend
+1) create influxdb nginxproxymangergraf  
+2) get your GeoLite2-City.mmdb google is your friend upload it somewhere where you'll find it
 
-start docker on the same host where npm runs
+start docker on the same host where nginx proxy manger runs
 
 ```
 docker run --name npmgraf -it
@@ -19,6 +19,21 @@ docker run --name npmgraf -it
 -e INFLUX_PORT=8086 \
 makarai/nginx-proxy-manager-graf
 ```
+
+world map
+```
+SELECT count("IP") AS "metric" FROM "ReverseProxyConnections" WHERE $timeFilter GROUP BY "latitude", "longitude", "key", "IP"
+```
+
+
+or as simple table
+```
+SELECT count("IP") AS "metric" FROM "ReverseProxyConnections" WHERE $timeFilter GROUP BY "latitude", "longitude", "key", "IP"
+```
+
+
+Obviously I'd appreciate a grafana Wiz to add some things here :) first time i worked with grafana.
+
 
 
 https://github.com/jc21/nginx-proxy-manager
