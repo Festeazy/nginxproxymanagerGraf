@@ -46,6 +46,11 @@ ENV NPMGRAF_HOME=/root/.config/NPMGRAF
 ARG NPMGRAF_HOME=/root/.config/NPMGRAF
 RUN export NPMGRAF_HOME
 
+## exludeHOMEIps
+ENV EXCLUDEIPS="192.168.0.*\|5.0.0.1"
+ARG EXCLUDEIPS="192.168.0.*\|5.0.0.1"
+
+
 ## seting up influx connection
 ENV INFLUX_USER=admin
 ARG INFLUX_USER=admin
