@@ -13,6 +13,7 @@ start docker on the same host where nginx proxy manger runs
 docker run --name npmgraf -it
 -v /home/docker/nginx-proxy-manager/data/logs:/logs \
 -v /home/docker/nginx-proxy-manager/GeoLite2-City.mmdb:/GeoLite2-City.mmdb \
+-e HOME_IPS="192.168.0.*\|192.168.10.*" \
 -e INFLUX_USER=admin -e INFLUX_PW=password \
 -e INFLUX_DB=nginxproxymanagergraf \
 -e INFLUX_HOST=192.168.0.189 \
