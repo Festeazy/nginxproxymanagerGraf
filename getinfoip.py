@@ -67,6 +67,7 @@ body = [
             "latitude": Lat,
             "longitude": Long,
             "Domain": Domain,
+            "City": City,
             "IP": IP
             },
         "fields": {
