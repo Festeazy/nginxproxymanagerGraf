@@ -9,7 +9,7 @@ do
   ipaddressnumber=`echo $line | grep -o -m 1 -E "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | grep -v "$HOME_IPS"`  ##UPDATE grep -v with local network
   length=`echo $line | awk -F ' ' '{print$14}' | grep -m 1 -o '[[:digit:]]*'`
   #device=`echo $line | grep -e ""'('*')'""`
-  echo $HOME_IPS
+  #echo $HOME_IPS
   echo $length
   echo $ipaddressnumber 
   echo $domain
