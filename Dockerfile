@@ -47,8 +47,8 @@ ARG NPMGRAF_HOME=/root/.config/NPMGRAF
 RUN export NPMGRAF_HOME
 
 ## exludeHOMEIps
-ENV HOME_IPS="192.168.0.*\|5.0.0.*"
-ARG HOME_IPS="192.168.0.*\|5.0.0.*"
+ENV HOME_IPS="192.168.0.*\|192.168.10.*"
+ARG HOME_IPS="192.168.0.*\|192.168.10.*"
 
 
 ## seting up influx connection
