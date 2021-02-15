@@ -15,12 +15,12 @@ do
   echo $domain
   #echo $dev
   #HomeIP='192.168.0.24' #HomeIP is used to not send your home public ip to keep the number of sends down
-  myhomeIP=$(wget -qO- https://icanhazip.com/)
-  if [[ "$ipaddressnumber" == "$myhomeIP" ]]
-  then
-    echo "Home IP"
-  else
+  #myhomeIP=$(wget -qO- https://icanhazip.com/)
+  #if [[ "$ipaddressnumber" == "$myhomeIP" ]]
+  #then
+  #  echo "Home IP"
+  #else
     python /root/.config/NPMGRAF/Getipinfo.py "$ipaddressnumber" "$domain" "$length"
-  fi
+  #fi
 done
 reboot
