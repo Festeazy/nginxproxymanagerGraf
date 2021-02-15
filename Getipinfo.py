@@ -68,6 +68,9 @@ body = [
             "latitude": Lat,
             "longitude": Long,
             "Domain": Domain,
+            "City": City,
+            "State": State,
+            "name": Country,
             "IP": IP
             },
         "fields": {
