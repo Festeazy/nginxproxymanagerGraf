@@ -73,9 +73,6 @@ ARG INFLUX_PORT=192.168.0.11
 COPY Getipinfo.py /root/.config/NPMGRAF/Getipinfo.py
 RUN chmod +x  /root/.config/NPMGRAF/Getipinfo.py
 
-COPY Getipinfo.py /root/.config/NPMGRAF/getipinfo.py
-RUN chmod +x  /root/.config/NPMGRAF/getipinfo.py
-
 COPY sendips.sh /root/.config/NPMGRAF/sendips.sh
 RUN chmod +x  /root/.config/NPMGRAF/sendips.sh
 
