@@ -2,6 +2,7 @@
 
 import sys
 #import geoip2.webservice
+print ('*************************************')
 print (sys.argv[1])
 
 #print str(sys.argv[1])
@@ -55,6 +56,7 @@ ifport = os.getenv('INFLUX_PORT')
 hostname = socket.gethostname()
 measurement_name = ("ReverseProxyConnections")
 print (measurement_name)
+print ('*************************************')
 # take a timestamp for this measurement
 time = datetime.datetime.utcnow()
 
