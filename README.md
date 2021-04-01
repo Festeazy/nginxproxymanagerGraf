@@ -7,6 +7,9 @@ required things you do beforehand
 1) create influxdb nginxproxymanagergraf
 2) Create username and password for nginxproxymanagergraf  
 3) get your GeoLite2-City.mmdb google is your friend upload it somewhere where you'll find it
+4) Start the docker container
+5) Add data source into grafana
+6) Import the dashboard file and set the new data source
 
 start docker on the same host where nginx proxy manger runs
 
