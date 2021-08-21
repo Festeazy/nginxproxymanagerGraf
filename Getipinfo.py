@@ -2,6 +2,7 @@
 
 import sys
 #import geoip2.webservice
+print ('*************************************')
 print (sys.argv[1])
 
 #print str(sys.argv[1])
@@ -10,7 +11,9 @@ import socket
 
 print(socket.gethostname())
 
-reader = geoip2.database.Reader('/Shared/nginx/GeoLite2-City.mmdb')
+
+
+reader = geoip2.database.Reader('/GeoLite2-City.mmdb')
 response = reader.city(str(sys.argv[1]))
 
 Lat = response.location.latitude
@@ -37,15 +40,23 @@ reader.close()
 import datetime
 from influxdb import InfluxDBClient
 
+## get env vars and use
+
+import os
 # influx configuration - edit these
-ifuser = "USERNAME"
-ifpass = "PASSWORD"
-ifdb   = "Docker"
-ifhost = "192.168.0.1"
-ifport = "8081"
+
+npmhome = "/root/.config/NPMGRAF"
+npmhome = os.getenv('NPMGRAF_HOME')
+ifuser = os.getenv('INFLUX_USER')
+ifpass = os.getenv('INFLUX_PW')
+ifdb   = os.getenv('INFLUX_DB')
+ifhost = os.getenv('INFLUX_HOST')
+ifport = os.getenv('INFLUX_PORT')
+
 hostname = socket.gethostname()
 measurement_name = ("ReverseProxyConnections")
 print (measurement_name)
+print ('*************************************')
 # take a timestamp for this measurement
 time = datetime.datetime.utcnow()
 
@@ -59,6 +70,9 @@ body = [
             "latitude": Lat,
             "longitude": Long,
             "Domain": Domain,
+            "City": City,
+            "State": State,
+            "name": Country,
             "IP": IP
             },
         "fields": {
